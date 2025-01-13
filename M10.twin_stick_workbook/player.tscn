@@ -13,7 +13,6 @@ motion_mode = 1
 script = ExtResource("1_osfgt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-unique_name_in_owner = true
 texture = ExtResource("2_unmeq")
 script = ExtResource("3_sak07")
 
