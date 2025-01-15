@@ -14,6 +14,7 @@ const DOWN_LEFT = Vector2.DOWN + Vector2.LEFT
 
 func _process(delta: float) -> void:
 	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	
 	var direction_discrete := direction.sign()
 	match direction_discrete:
 		Vector2.RIGHT, Vector2.LEFT:
