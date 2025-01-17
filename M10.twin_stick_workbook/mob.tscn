@@ -8,7 +8,7 @@ radius = 18.0
 height = 130.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0t8bf"]
-radius = 124.145
+radius = 337.001
 
 [node name="Mob" type="CharacterBody2D"]
 motion_mode = 1

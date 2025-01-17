@@ -10,7 +10,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gc6i"]
 radius = 19.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_osfgt")
 

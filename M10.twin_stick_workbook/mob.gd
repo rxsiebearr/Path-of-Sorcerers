@@ -3,17 +3,19 @@ extends CharacterBody2D
 @export var max_speed := 250.0
 @export var acceleration := 700.0
 
-var player: Player = null
+var player = null
 @onready var area_2d: Area2D = %Area2D
 
 func _ready() -> void:
 	area_2d.body_entered.connect(func(body: Node) -> void:
-		if body is Player:
+		if body.is_in_group("player"):
 			player = body
+		print("enter")
 		)
-	area_2d.body_existed.connect(func(body: Node) -> void:
-		if body is Player:
+	area_2d.body_exited.connect(func(body: Node) -> void:
+		if body.is_in_group("player"):
 			player = null
+			print("exit")
 		)
 func _physics_process(delta: float) -> void:
 	if player == null:
