@@ -1,19 +1,28 @@
-extends CharacterBody2D
+class_name Mob extends CharacterBody2D
 
 @export var max_speed := 250.0
 @export var acceleration := 700.0
+@export var health := 3: set = set_health
 
+func set_health(new_health: int) -> void:
+	health = new_health
+	if health <= 0:
+		die()
+	
+func die() -> void:
+	queue_free()
+	
 var player = null
 @onready var area_2d: Area2D = %Area2D
 
 func _ready() -> void:
 	area_2d.body_entered.connect(func(body: Node) -> void:
-		if body.is_in_group("player"):
+		if body is Player:
 			player = body
 		print("enter")
 		)
 	area_2d.body_exited.connect(func(body: Node) -> void:
-		if body.is_in_group("player"):
+		if body is Player:
 			player = null
 			print("exit")
 		)
