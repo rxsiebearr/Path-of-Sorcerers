@@ -13,7 +13,9 @@ func die() -> void:
 	queue_free()
 	
 var player = null
+
 @onready var area_2d: Area2D = %Area2D
+@onready var hit_box: Area2D = $HitBox
 
 func _ready() -> void:
 	area_2d.body_entered.connect(func(body: Node) -> void:
@@ -26,6 +28,10 @@ func _ready() -> void:
 			player = null
 			print("exit")
 		)
+	hit_box.body_entered.connect(func (body: Node) -> void:
+		if body is Player:
+			body.health -= damage
+	)
 func _physics_process(delta: float) -> void:
 	if player == null:
 		velocity = velocity.move_toward(Vector2.ZERO, acceleration * delta)

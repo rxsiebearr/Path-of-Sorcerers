@@ -5,7 +5,7 @@ extends Node2D
 @export_range(100.0, 2000.0, 1.0) var max_range = 700.0
 @export_range(100.0, 3000.0, 1.0) var max_bullet_speed = 1000.0
 
-func _read() -> void:
+func _ready() -> void:
 	if Engine.is_editor_hint():
 		set_physics_process(	false)
 		

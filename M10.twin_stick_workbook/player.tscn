@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctyqol3l1phnp"]
+[gd_scene load_steps=11 format=3 uid="uid://ctyqol3l1phnp"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_osfgt"]
 [ext_resource type="Texture2D" uid="uid://bw03btxpkxde4" path="res://player/godot_bottom.png" id="2_unmeq"]
@@ -10,6 +10,21 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gc6i"]
 radius = 19.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2trke"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dm0ku"]
+bg_color = Color(0.894541, 0, 0.210921, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
@@ -48,3 +63,14 @@ position = Vector2(-2, -20)
 rotation = -0.324338
 scale = Vector2(0.785714, 0.690476)
 texture = ExtResource("5_8blb5")
+
+[node name="Health Bar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -64.0
+offset_top = -91.0
+offset_right = 64.0
+offset_bottom = -64.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2trke")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dm0ku")
+value = 50.0
+show_percentage = false
