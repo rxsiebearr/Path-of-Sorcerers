@@ -17,14 +17,15 @@ border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dm0ku"]
-bg_color = Color(0.894541, 0, 0.210921, 1)
+bg_color = Color(0.728685, 0.799068, 0.897082, 1)
 border_width_left = 3
 border_width_top = 3
+border_width_right = 3
 border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
@@ -72,5 +73,7 @@ offset_right = 64.0
 offset_bottom = -64.0
 theme_override_styles/background = SubResource("StyleBoxFlat_2trke")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dm0ku")
-value = 50.0
+max_value = 10.0
+step = 1.0
+value = 10.0
 show_percentage = false
