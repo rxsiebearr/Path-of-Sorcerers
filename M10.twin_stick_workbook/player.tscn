@@ -6,13 +6,13 @@
 [ext_resource type="Script" path="res://sprite_2d.gd" id="3_sak07"]
 [ext_resource type="Script" path="res://weapon_pivot.gd" id="5_p0i1p"]
 [ext_resource type="Script" path="res://weapon.gd" id="6_am6h4"]
-[ext_resource type="Texture2D" uid="uid://ir7fav57fo5b" path="res://image-removebg-preview.png" id="7_gc11j"]
+[ext_resource type="Texture2D" uid="uid://hirc16cd3ngi" path="res://unnamed.png" id="7_6xitm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4gc6i"]
 radius = 19.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2trke"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -53,33 +53,34 @@ shape = SubResource("CircleShape2D_4gc6i")
 
 [node name="WeaponPivot" type="Node2D" parent="."]
 unique_name_in_owner = true
+rotation = 0.001572
 script = ExtResource("5_p0i1p")
 
 [node name="WeaponAnchor" type="Marker2D" parent="WeaponPivot"]
 position = Vector2(64, 0)
 
 [node name="Weapon" type="Node2D" parent="WeaponPivot/WeaponAnchor"]
-position = Vector2(143, -35)
+position = Vector2(114.945, -34.9559)
 script = ExtResource("6_am6h4")
 
 [node name="Weapon2" type="Node2D" parent="WeaponPivot/WeaponAnchor"]
-position = Vector2(143, -80)
+position = Vector2(114.945, -79.9559)
 script = ExtResource("6_am6h4")
 
 [node name="HandRight" type="Sprite2D" parent="WeaponPivot/WeaponAnchor"]
 texture_filter = 1
-position = Vector2(49, 31)
+position = Vector2(35.2625, 43)
 rotation = 6.28319
-scale = Vector2(-0.304547, 0.267632)
-texture = ExtResource("7_gc11j")
+scale = Vector2(-0.196117, 0.172345)
+texture = ExtResource("7_6xitm")
 flip_h = true
 
 [node name="HandLeft" type="Sprite2D" parent="WeaponPivot/WeaponAnchor"]
 texture_filter = 1
-position = Vector2(50.1367, -13.9527)
+position = Vector2(35.2625, -11)
 rotation = 6.28319
-scale = Vector2(-0.304547, 0.267632)
-texture = ExtResource("7_gc11j")
+scale = Vector2(-0.192174, 0.16888)
+texture = ExtResource("7_6xitm")
 flip_h = true
 
 [node name="Health Bar" type="ProgressBar" parent="."]
