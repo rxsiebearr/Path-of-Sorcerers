@@ -2,7 +2,7 @@ extends Node2D
 
 var is_using_gamepad := false
 
-@onready var _weapon_anchor: Marker2D = %WeaponAnchor
+@onready var weapon_anchor: Marker2D = %WeaponAnchor
 
 
 func _process(_delta: float) -> void:
