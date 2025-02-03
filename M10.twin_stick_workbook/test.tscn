@@ -1,9 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://pyw62tcg8wvj"]
+[gd_scene load_steps=9 format=3 uid="uid://pyw62tcg8wvj"]
 
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="1_00tn5"]
 [ext_resource type="PackedScene" uid="uid://ctyqol3l1phnp" path="res://player.tscn" id="2_udaxh"]
 [ext_resource type="PackedScene" uid="uid://p5uqcme20y4m" path="res://mob.tscn" id="3_n634u"]
-[ext_resource type="PackedScene" uid="uid://naafym1d14jm" path="res://pickup.tscn" id="4_7sqwr"]
+[ext_resource type="PackedScene" uid="uid://biufdmaushfpg" path="res://pickup.tscn" id="4_7sqwr"]
+[ext_resource type="Script" path="res://itemhealing.gd" id="5_070a2"]
+[ext_resource type="AudioStream" uid="uid://o3ra7o263286" path="res://pickups/pickup_health.wav" id="6_x4gle"]
+[ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="7_8fhtd"]
+
+[sub_resource type="Resource" id="Resource_phxqv"]
+script = ExtResource("5_070a2")
+healing_amount = 2
+display_name = "health"
+texture = ExtResource("7_8fhtd")
+sound_on_pickup = ExtResource("6_x4gle")
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,3 +27,4 @@ position = Vector2(762, 412)
 
 [node name="Pickup" parent="." instance=ExtResource("4_7sqwr")]
 position = Vector2(1318, 810)
+item = SubResource("Resource_phxqv")

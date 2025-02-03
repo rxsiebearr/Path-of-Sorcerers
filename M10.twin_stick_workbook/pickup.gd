@@ -9,25 +9,15 @@ class_name Pickup extends Area2D
 
 func _ready() -> void:
 	set_item(item)
-
-	animation_player.play("idle")
 	body_entered.connect(func (body: Node2D) -> void:
 		if body is Player:
 			item.use(body)
-		#animation_player.play("destroy")
-		set_deferred("monitoring", false)
+		animation_player.play("animation")
 		audio_stream_player.play()
 		animation_player.animation_finished.connect(func (_animation_name: String) -> void:
 			queue_free()
 		)
 	)
-
-
-func _get_configuration_warnings() -> PackedStringArray:
-	var warnings := PackedStringArray()
-	if item == null:
-		warnings.append("The pickup has no item assigned. Please assign an item to the pickup in the inspector.")
-	return warnings
 
 
 func set_item(value: Item) -> void:
