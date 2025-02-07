@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbqqmjhj5ifgn"]
+
+[ext_resource type="Script" path="res://chest.gd" id="1_6kv1b"]
+[ext_resource type="Texture2D" uid="uid://dub7cda3qxho2" path="res://pickups/chest/chest_bottom.png" id="2_nuv2s"]
+[ext_resource type="Texture2D" uid="uid://bfj2ayjhou4bv" path="res://pickups/chest/chest_top.png" id="3_kdea6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h3k3f"]
+radius = 153.834
+
+[sub_resource type="Animation" id="Animation_ykenb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ChestTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(143, 86)]
+}
+
+[sub_resource type="Animation" id="Animation_q6d7a"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ChestTop:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(143, 86), Vector2(195, 51), Vector2(227, 59), Vector2(249, 91), Vector2(253, 123)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_en5yd"]
+_data = {
+"RESET": SubResource("Animation_ykenb"),
+"open": SubResource("Animation_q6d7a")
+}
+
+[node name="Chest" type="Area2D"]
+script = ExtResource("1_6kv1b")
+
+[node name="ChestBottom" type="Sprite2D" parent="."]
+position = Vector2(142.5, 90.5)
+texture = ExtResource("2_nuv2s")
+
+[node name="ChestTop" type="Sprite2D" parent="."]
+position = Vector2(143, 86)
+texture = ExtResource("3_kdea6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(143, 93)
+shape = SubResource("CircleShape2D_h3k3f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_en5yd")
+}
