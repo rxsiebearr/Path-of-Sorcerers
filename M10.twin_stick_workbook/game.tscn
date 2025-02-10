@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=4 uid="uid://cr1lpw8e6vsid"]
+
+[ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="1_76qgn"]
+[ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="2_1w0d1"]
+[ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="3_hxj8u"]
+[ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="4_g8qab"]
+[ext_resource type="PackedScene" uid="uid://c3fl3stluv0gn" path="res://levels/bridges.tscn" id="5_1iltw"]
+[ext_resource type="PackedScene" uid="uid://dlxjrgals3rg2" path="res://levels/invisible_walls.tscn" id="6_4l2hb"]
+[ext_resource type="PackedScene" uid="uid://ctyqol3l1phnp" path="res://player.tscn" id="7_nyxeo"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+
+[node name="RoomA" parent="." instance=ExtResource("2_1w0d1")]
+position = Vector2(104, 2128)
+
+[node name="RoomB" parent="." instance=ExtResource("3_hxj8u")]
+position = Vector2(2672, 1736)
+
+[node name="RoomC" parent="." instance=ExtResource("4_g8qab")]
+position = Vector2(1648, -608)
+
+[node name="Bridges" parent="." instance=ExtResource("5_1iltw")]
+position = Vector2(1896, 2776)
+tile_map_data = PackedByteArray("AAD9////AAAAAAEAAAD+////AAAAAAEAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAABAP7/AAAAAAEAAAABAP3/AAAAAAEAAAACAP3/AAAAAAEAAAACAPz/AAAAAAEAAAADAPz/AAAAAAEAAAAEAPz/AAAAAAEAAAAFAPz/AAAAAAEAAAA=")
+
+[node name="InvisibleWalls" parent="." instance=ExtResource("6_4l2hb")]
+visible = false
+position = Vector2(1642, 2651)
+tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAFAP//AAAAAAAAAAACAP7/AAAAAAAAAAACAP3/AAAAAAAAAAADAP3/AAAAAAAAAAADAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAPz/AAAAAAAAAAAGAPz/AAAAAAAAAAA=")
+
+[node name="BackgroundBlueSky" parent="." instance=ExtResource("1_76qgn")]
+
+[node name="Player" parent="." instance=ExtResource("7_nyxeo")]
+position = Vector2(647, 2592)
+collision_mask = 64
