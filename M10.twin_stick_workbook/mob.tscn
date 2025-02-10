@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://p5uqcme20y4m"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_vcvsm"]
-[ext_resource type="Texture2D" uid="uid://nohjoiah3jgr" path="res://mobs/sword_inactive.png" id="2_kmgil"]
+[ext_resource type="Texture2D" uid="uid://byw2dvgv4ehw0" path="res://potatoe.png" id="2_8iix2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_equvk"]
 radius = 18.0
@@ -18,7 +18,8 @@ motion_mode = 1
 script = ExtResource("1_vcvsm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_kmgil")
+scale = Vector2(0.291667, 0.321608)
+texture = ExtResource("2_8iix2")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 rotation = 1.5708

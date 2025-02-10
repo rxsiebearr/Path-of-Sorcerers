@@ -8,11 +8,11 @@
 [ext_resource type="AudioStream" uid="uid://o3ra7o263286" path="res://pickups/pickup_health.wav" id="4_qiiuk"]
 [ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="5_ym2o1"]
 [ext_resource type="Script" path="res://itemdamage.gd" id="6_0o8od"]
-[ext_resource type="AudioStream" uid="uid://b3nr7dge2hyvx" path="res://spongebob-fail.mp3" id="7_ldddw"]
+[ext_resource type="AudioStream" uid="uid://bu7x1r3bfqlbo" path="res://perfect-fart.mp3" id="7_801m0"]
 [ext_resource type="Texture2D" uid="uid://b7w5csy7jr3pq" path="res://loopyble-5.png" id="8_p6fcg"]
 [ext_resource type="Script" path="res://itemspeed.gd" id="9_pp0df"]
 [ext_resource type="AudioStream" uid="uid://cq4jwd2co1jh8" path="res://taco-bell-bong-sfx.mp3" id="10_eyvmp"]
-[ext_resource type="Texture2D" uid="uid://becpsocov5mvj" path="res://nairon.png" id="11_mb3i7"]
+[ext_resource type="Texture2D" uid="uid://s41qlfv1prrv" path="res://nairon-3.png" id="11_5vkfq"]
 
 [sub_resource type="Resource" id="Resource_mpjgs"]
 script = ExtResource("3_yhmnj")
@@ -26,13 +26,13 @@ script = ExtResource("6_0o8od")
 damage_amount = 2
 display_name = "damage"
 texture = ExtResource("8_p6fcg")
-sound_on_pickup = ExtResource("7_ldddw")
+sound_on_pickup = ExtResource("7_801m0")
 
 [sub_resource type="Resource" id="Resource_gf8ip"]
 script = ExtResource("9_pp0df")
 speed_amount = 5000
 display_name = "speed"
-texture = ExtResource("11_mb3i7")
+texture = ExtResource("11_5vkfq")
 sound_on_pickup = ExtResource("10_eyvmp")
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h3k3f"]

@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b7w5csy7jr3pq" path="res://loopyble-5.png" id="10_g31lu"]
 [ext_resource type="Script" path="res://itemspeed.gd" id="12_mte30"]
 [ext_resource type="AudioStream" uid="uid://cq4jwd2co1jh8" path="res://taco-bell-bong-sfx.mp3" id="13_tnsi3"]
-[ext_resource type="Texture2D" uid="uid://becpsocov5mvj" path="res://nairon.png" id="14_2tqdd"]
+[ext_resource type="Texture2D" uid="uid://s41qlfv1prrv" path="res://nairon-3.png" id="14_ft63f"]
 
 [sub_resource type="Resource" id="Resource_phxqv"]
 script = ExtResource("5_070a2")
@@ -31,9 +31,9 @@ sound_on_pickup = ExtResource("9_bf4hw")
 
 [sub_resource type="Resource" id="Resource_6p0cv"]
 script = ExtResource("12_mte30")
-speed_amount = 50000
+speed_amount = 6000
 display_name = "speed"
-texture = ExtResource("14_2tqdd")
+texture = ExtResource("14_ft63f")
 sound_on_pickup = ExtResource("13_tnsi3")
 
 [node name="Node2D" type="Node2D"]
