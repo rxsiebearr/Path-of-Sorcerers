@@ -1,9 +1,9 @@
 class_name Mob extends CharacterBody2D
 
-@export var max_speed := 250.0
-@export var acceleration := 700.0
+@export var max_speed := 300.0
+@export var acceleration := 750.0
 @export var health := 3: set = set_health
-@export var damage := 1.0
+@export var damage := 2.0
 func set_health(new_health: int) -> void:
 	health = new_health
 	if health <= 0:

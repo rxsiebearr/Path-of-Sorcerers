@@ -1,27 +1,30 @@
-[gd_scene load_steps=6 format=3 uid="uid://p5uqcme20y4m"]
+[gd_scene load_steps=6 format=3 uid="uid://cqplyqiw72w7n"]
 
-[ext_resource type="Script" path="res://mob.gd" id="1_vcvsm"]
-[ext_resource type="Texture2D" uid="uid://byw2dvgv4ehw0" path="res://potatoe.png" id="2_8iix2"]
+[ext_resource type="Script" path="res://mob.gd" id="1_tjji6"]
+[ext_resource type="Texture2D" uid="uid://bs2p0p2d7jwsb" path="res://unnamed-3.png" id="2_ph0ca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iau43"]
-size = Vector2(129, 86)
+size = Vector2(328, 192.001)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0t8bf"]
-radius = 337.001
+radius = 1136.03
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmgxs"]
-size = Vector2(86, 133)
+size = Vector2(200, 344)
 
 [node name="Mob" type="CharacterBody2D"]
 motion_mode = 1
-script = ExtResource("1_vcvsm")
+script = ExtResource("1_tjji6")
+max_speed = 500.0
+health = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.291667, 0.321608)
-texture = ExtResource("2_8iix2")
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(1.5, 1.655)
+texture = ExtResource("2_ph0ca")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(1, -1)
+position = Vector2(0.000216961, -4.00033)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_iau43")
 
@@ -35,6 +38,6 @@ debug_color = Color(0.854902, 0.462745, 0.72549, 0.239216)
 [node name="HitBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(2, -1.5)
+position = Vector2(4, -12)
 shape = SubResource("RectangleShape2D_jmgxs")
 debug_color = Color(0.42587, 0.593339, 0.306003, 0.42)

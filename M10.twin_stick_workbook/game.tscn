@@ -1,12 +1,46 @@
-[gd_scene load_steps=8 format=4 uid="uid://cr1lpw8e6vsid"]
+[gd_scene load_steps=24 format=4 uid="uid://cr1lpw8e6vsid"]
 
 [ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="1_76qgn"]
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="2_1w0d1"]
+[ext_resource type="PackedScene" uid="uid://b7a36g1i5dlm0" path="res://chest.tscn" id="2_cnxfc"]
 [ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="3_hxj8u"]
+[ext_resource type="PackedScene" uid="uid://biufdmaushfpg" path="res://pickup.tscn" id="3_rxpo2"]
 [ext_resource type="PackedScene" uid="uid://cq0mmphkbrvmm" path="res://levels/rooms/room_c.tscn" id="4_g8qab"]
+[ext_resource type="Script" path="res://itemhealing.gd" id="4_r7jsa"]
 [ext_resource type="PackedScene" uid="uid://c3fl3stluv0gn" path="res://levels/bridges.tscn" id="5_1iltw"]
+[ext_resource type="AudioStream" uid="uid://o3ra7o263286" path="res://pickups/pickup_health.wav" id="5_eac68"]
 [ext_resource type="PackedScene" uid="uid://dlxjrgals3rg2" path="res://levels/invisible_walls.tscn" id="6_4l2hb"]
+[ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="6_c1mut"]
+[ext_resource type="Script" path="res://itemdamage.gd" id="7_hlwi3"]
 [ext_resource type="PackedScene" uid="uid://ctyqol3l1phnp" path="res://player.tscn" id="7_nyxeo"]
+[ext_resource type="AudioStream" uid="uid://bu7x1r3bfqlbo" path="res://perfect-fart.mp3" id="8_olwxn"]
+[ext_resource type="PackedScene" uid="uid://p5uqcme20y4m" path="res://mob.tscn" id="8_ts1lk"]
+[ext_resource type="Texture2D" uid="uid://b7w5csy7jr3pq" path="res://loopyble-5.png" id="9_owha8"]
+[ext_resource type="Script" path="res://itemspeed.gd" id="10_gr7lm"]
+[ext_resource type="AudioStream" uid="uid://cq4jwd2co1jh8" path="res://taco-bell-bong-sfx.mp3" id="11_d4tqv"]
+[ext_resource type="Texture2D" uid="uid://s41qlfv1prrv" path="res://nairon-3.png" id="12_e3re6"]
+[ext_resource type="PackedScene" uid="uid://cqplyqiw72w7n" path="res://mob2.tscn" id="15_leiva"]
+
+[sub_resource type="Resource" id="Resource_jp31r"]
+script = ExtResource("4_r7jsa")
+healing_amount = 2
+display_name = "health"
+texture = ExtResource("6_c1mut")
+sound_on_pickup = ExtResource("5_eac68")
+
+[sub_resource type="Resource" id="Resource_kevdj"]
+script = ExtResource("7_hlwi3")
+damage_amount = 2
+display_name = "damage"
+texture = ExtResource("9_owha8")
+sound_on_pickup = ExtResource("8_olwxn")
+
+[sub_resource type="Resource" id="Resource_wyof4"]
+script = ExtResource("10_gr7lm")
+speed_amount = 1000
+display_name = "speed"
+texture = ExtResource("12_e3re6")
+sound_on_pickup = ExtResource("11_d4tqv")
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -14,20 +48,101 @@ y_sort_enabled = true
 [node name="RoomA" parent="." instance=ExtResource("2_1w0d1")]
 position = Vector2(104, 2128)
 
+[node name="Chest" parent="RoomA" instance=ExtResource("2_cnxfc")]
+position = Vector2(1084.25, 658.243)
+rotation = 0.00114604
+
+[node name="Pickup" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(419.928, 935.482)
+rotation = 0.00114604
+item = SubResource("Resource_jp31r")
+
+[node name="Pickup2" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(981.65, 306.125)
+rotation = 0.00114604
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup3" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(300.704, 258.345)
+rotation = 0.00114604
+item = SubResource("Resource_wyof4")
+
 [node name="RoomB" parent="." instance=ExtResource("3_hxj8u")]
 position = Vector2(2672, 1736)
+
+[node name="Mob8" parent="RoomB" instance=ExtResource("8_ts1lk")]
+position = Vector2(516, 730)
+
+[node name="Mob" parent="RoomB" instance=ExtResource("8_ts1lk")]
+position = Vector2(807, 176)
+
+[node name="Mob2" parent="RoomB" instance=ExtResource("8_ts1lk")]
+position = Vector2(319, 586)
+
+[node name="Mob4" parent="RoomB" instance=ExtResource("8_ts1lk")]
+position = Vector2(1280, 334)
+
+[node name="Mob3" parent="RoomB" instance=ExtResource("8_ts1lk")]
+position = Vector2(930, 697)
+
+[node name="Mob5" parent="RoomB" instance=ExtResource("8_ts1lk")]
+position = Vector2(978, 46)
+
+[node name="Mob6" parent="RoomB" instance=ExtResource("8_ts1lk")]
+position = Vector2(1086, 167)
+
+[node name="Mob7" parent="RoomB" instance=ExtResource("8_ts1lk")]
+position = Vector2(404, 462)
+
+[node name="Chest2" parent="RoomB" instance=ExtResource("2_cnxfc")]
+position = Vector2(798, -414)
+
+[node name="Pickup4" parent="RoomB" instance=ExtResource("3_rxpo2")]
+position = Vector2(196, 398)
+item = SubResource("Resource_jp31r")
+
+[node name="Pickup5" parent="RoomB" instance=ExtResource("3_rxpo2")]
+position = Vector2(1152, 739)
+item = SubResource("Resource_jp31r")
+
+[node name="Pickup6" parent="RoomB" instance=ExtResource("3_rxpo2")]
+position = Vector2(654, 167)
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup7" parent="RoomB" instance=ExtResource("3_rxpo2")]
+position = Vector2(1086, 73)
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup8" parent="RoomB" instance=ExtResource("3_rxpo2")]
+position = Vector2(196, -321)
+item = SubResource("Resource_wyof4")
+
+[node name="Mob9" parent="RoomB" instance=ExtResource("15_leiva")]
+position = Vector2(-444, -1884)
 
 [node name="RoomC" parent="." instance=ExtResource("4_g8qab")]
 position = Vector2(1648, -608)
 
+[node name="Chest3" parent="RoomC" instance=ExtResource("2_cnxfc")]
+position = Vector2(360, 829)
+rotation = -0.00114604
+
+[node name="Chest2" parent="RoomC" instance=ExtResource("2_cnxfc")]
+position = Vector2(1011, 2967)
+rotation = -0.00114604
+
+[node name="Chest4" parent="RoomC" instance=ExtResource("2_cnxfc")]
+position = Vector2(710, 196)
+rotation = -0.00114604
+
 [node name="Bridges" parent="." instance=ExtResource("5_1iltw")]
 position = Vector2(1896, 2776)
-tile_map_data = PackedByteArray("AAD9////AAAAAAEAAAD+////AAAAAAEAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAABAP7/AAAAAAEAAAABAP3/AAAAAAEAAAACAP3/AAAAAAEAAAACAPz/AAAAAAEAAAADAPz/AAAAAAEAAAAEAPz/AAAAAAEAAAAFAPz/AAAAAAEAAAA=")
+tile_map_data = PackedByteArray("AAD9////AAAAAAEAAAD+////AAAAAAEAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAABAP7/AAAAAAEAAAABAP3/AAAAAAEAAAACAP3/AAAAAAEAAAACAPz/AAAAAAEAAAADAPz/AAAAAAEAAAAEAPz/AAAAAAEAAAAFAPz/AAAAAAEAAAANAPf/AAABAAAAAAANAPb/AAABAAAAAAANAPX/AAABAAAAAAAMAPX/AAACAAAAAAALAPX/AAACAAAAAAAKAPX/AAACAAAAAAAJAPX/AAACAAAAAAAIAPX/AAACAAAAAAAHAPX/AAACAAAAAAAHAPT/AAABAAEAAAAHAPP/AAABAAEAAAAHAPL/AAABAAEAAAAHAPH/AAABAAEAAAAHAPD/AAABAAEAAAA=")
 
 [node name="InvisibleWalls" parent="." instance=ExtResource("6_4l2hb")]
 visible = false
 position = Vector2(1642, 2651)
-tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAFAP//AAAAAAAAAAACAP7/AAAAAAAAAAACAP3/AAAAAAAAAAADAP3/AAAAAAAAAAADAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAPz/AAAAAAAAAAAGAPz/AAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAFAP7/AAAAAAAAAAAGAP7/AAAAAAAAAAAFAP//AAAAAAAAAAACAP7/AAAAAAAAAAACAP3/AAAAAAAAAAADAP3/AAAAAAAAAAADAPz/AAAAAAAAAAAEAPz/AAAAAAAAAAAFAPz/AAAAAAAAAAAGAPz/AAAAAAAAAAAIAPL/AAAAAAAAAAAIAPP/AAAAAAAAAAAIAPT/AAAAAAAAAAAIAPX/AAAAAAAAAAAIAPb/AAAAAAAAAAAIAPf/AAAAAAAAAAAJAPf/AAAAAAAAAAAKAPf/AAAAAAAAAAALAPf/AAAAAAAAAAAMAPf/AAAAAAAAAAANAPf/AAAAAAAAAAAOAPf/AAAAAAAAAAAQAPf/AAAAAAAAAAAQAPb/AAAAAAAAAAAQAPX/AAAAAAAAAAAPAPX/AAAAAAAAAAAOAPX/AAAAAAAAAAANAPX/AAAAAAAAAAAMAPX/AAAAAAAAAAALAPX/AAAAAAAAAAAKAPX/AAAAAAAAAAAKAPT/AAAAAAAAAAAKAPP/AAAAAAAAAAAKAPL/AAAAAAAAAAD6/wYAAAAAAAAAAAA=")
 
 [node name="BackgroundBlueSky" parent="." instance=ExtResource("1_76qgn")]
 

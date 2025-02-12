@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://itemhealing.gd" id="5_070a2"]
 [ext_resource type="AudioStream" uid="uid://o3ra7o263286" path="res://pickups/pickup_health.wav" id="6_x4gle"]
 [ext_resource type="Texture2D" uid="uid://be8lmb157qflx" path="res://pickups/pickup_health.png" id="7_8fhtd"]
-[ext_resource type="PackedScene" path="res://chest.tscn" id="8_qlsjn"]
+[ext_resource type="PackedScene" uid="uid://b7a36g1i5dlm0" path="res://chest.tscn" id="8_qlsjn"]
 [ext_resource type="Script" path="res://itemdamage.gd" id="9_1gsj4"]
 [ext_resource type="AudioStream" uid="uid://bu7x1r3bfqlbo" path="res://perfect-fart.mp3" id="9_bf4hw"]
 [ext_resource type="Texture2D" uid="uid://b7w5csy7jr3pq" path="res://loopyble-5.png" id="10_g31lu"]

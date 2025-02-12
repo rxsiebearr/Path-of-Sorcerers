@@ -20,9 +20,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		animation_player.play("open")
 
 		create_pickup()
-		get_viewport().set_input_as_handled()
-
-
+		get_viewport().set_input_as_handled()	
+		
 func create_pickup() -> void:
 	if possible_items == []:
 		return
@@ -52,3 +51,4 @@ func create_pickup() -> void:
 	tween.tween_property(pickup, "position:y", land_position.y - jump_height, HALF_FLIGHT_TIME)
 	tween.set_ease(Tween.EASE_IN)
 	tween.tween_property(pickup, "position:y", land_position.y, HALF_FLIGHT_TIME)
+	
