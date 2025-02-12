@@ -20,7 +20,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		animation_player.play("open")
 
 		create_pickup()
-		get_viewport().set_input_as_handled()	
+		get_viewport().set_input_as_handled()
+		set_deferred("monitoring", false)
 		
 func create_pickup() -> void:
 	if possible_items == []:

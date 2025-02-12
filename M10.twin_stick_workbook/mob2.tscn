@@ -13,10 +13,11 @@ radius = 1136.03
 size = Vector2(200, 344)
 
 [node name="Mob" type="CharacterBody2D"]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_tjji6")
-max_speed = 500.0
-health = 100
+max_speed = 850.0
+health = 200
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.52588e-05, 0)

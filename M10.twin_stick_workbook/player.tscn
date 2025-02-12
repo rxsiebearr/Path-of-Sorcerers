@@ -36,6 +36,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_osfgt")
 

@@ -23,7 +23,7 @@
 
 [sub_resource type="Resource" id="Resource_jp31r"]
 script = ExtResource("4_r7jsa")
-healing_amount = 2
+healing_amount = 3
 display_name = "health"
 texture = ExtResource("6_c1mut")
 sound_on_pickup = ExtResource("5_eac68")
@@ -57,9 +57,194 @@ position = Vector2(419.928, 935.482)
 rotation = 0.00114604
 item = SubResource("Resource_jp31r")
 
-[node name="Pickup2" parent="RoomA" instance=ExtResource("3_rxpo2")]
-position = Vector2(981.65, 306.125)
+[node name="Pickup21" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(880.751, 1090.01)
 rotation = 0.00114604
+item = SubResource("Resource_jp31r")
+
+[node name="Pickup22" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2879.58, 364.301)
+rotation = 0.00114604
+item = SubResource("Resource_jp31r")
+
+[node name="Pickup23" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(3807.23, -202.637)
+rotation = 0.00114604
+item = SubResource("Resource_jp31r")
+
+[node name="Pickup24" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(3104.8, -700.442)
+rotation = 0.00114604
+item = SubResource("Resource_jp31r")
+
+[node name="Pickup2" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1001.74, 228.148)
+rotation = 0.00114604
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup4" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1293.54, 399.483)
+rotation = 0.00114604
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup5" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(968.534, 407.11)
+rotation = 0.00114604
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup6" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1196.71, 249.372)
+rotation = 0.00114604
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup7" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1137.61, 340.304)
+rotation = -0.0818786
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup8" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(905.657, 300.038)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup9" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(990.332, 583.135)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup20" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(990.332, 583.135)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup10" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1165.45, 476.336)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup11" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1322.7, 265.516)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup12" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1320.1, 789.513)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup13" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1168.03, 847.339)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup14" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1030.14, 750.181)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup15" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1300.89, 966.491)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup16" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1109.8, 1044.27)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup17" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1254.71, 1122.44)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup18" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(969.705, 1130.11)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup19" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(941.88, 978.08)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup32" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(3689.02, -12.7724)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup33" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(3490.23, -203)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup34" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(3933.8, 175.508)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup35" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2562.76, -1538.06)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup36" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2167.77, -1545.52)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup37" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2411.04, -1775.24)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup38" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2411.04, -1775.24)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup39" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2008.01, -1749.7)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup40" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2385.37, -2069.27)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup41" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2509.52, -2195.13)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup42" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2179.26, -1972.5)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup43" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1906.44, -2125.82)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup44" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1939.68, -2333.78)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup45" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1939.91, -2539.78)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup46" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2126.91, -2537.56)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup47" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2334.59, -2257.33)
+rotation = 0.345231
 item = SubResource("Resource_kevdj")
 
 [node name="Pickup3" parent="RoomA" instance=ExtResource("3_rxpo2")]
