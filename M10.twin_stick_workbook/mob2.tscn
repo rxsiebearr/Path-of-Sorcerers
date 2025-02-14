@@ -17,7 +17,7 @@ collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_tjji6")
 max_speed = 850.0
-health = 200
+health = 100
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.52588e-05, 0)

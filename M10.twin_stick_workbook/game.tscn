@@ -305,15 +305,14 @@ item = SubResource("Resource_wyof4")
 [node name="Mob9" parent="RoomB" instance=ExtResource("15_leiva")]
 position = Vector2(-444, -1884)
 
+[node name="Chest" parent="RoomB" instance=ExtResource("2_cnxfc")]
+position = Vector2(-18, 620)
+
 [node name="RoomC" parent="." instance=ExtResource("4_g8qab")]
 position = Vector2(1648, -608)
 
 [node name="Chest3" parent="RoomC" instance=ExtResource("2_cnxfc")]
 position = Vector2(360, 829)
-rotation = -0.00114604
-
-[node name="Chest2" parent="RoomC" instance=ExtResource("2_cnxfc")]
-position = Vector2(1011, 2967)
 rotation = -0.00114604
 
 [node name="Chest4" parent="RoomC" instance=ExtResource("2_cnxfc")]

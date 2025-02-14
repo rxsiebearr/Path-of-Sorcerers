@@ -12,6 +12,7 @@ func _ready() -> void:
 	body_entered.connect(func (body: Node2D) -> void:
 		if body is Player:
 			item.use(body)
+			set_deferred("monitoring", false)
 		animation_player.play("animation")
 		audio_stream_player.play()
 		animation_player.animation_finished.connect(func (_animation_name: String) -> void:
