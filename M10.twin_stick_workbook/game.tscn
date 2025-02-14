@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=4 uid="uid://cr1lpw8e6vsid"]
+[gd_scene load_steps=27 format=4 uid="uid://cr1lpw8e6vsid"]
 
 [ext_resource type="PackedScene" uid="uid://wdey00p3syru" path="res://levels/background/background_blue_sky.tscn" id="1_76qgn"]
+[ext_resource type="Script" path="res://game.gd" id="1_cpxib"]
 [ext_resource type="PackedScene" uid="uid://cu2rb5dl4ljte" path="res://levels/rooms/room_a.tscn" id="2_1w0d1"]
 [ext_resource type="PackedScene" uid="uid://b7a36g1i5dlm0" path="res://chest.tscn" id="2_cnxfc"]
 [ext_resource type="PackedScene" uid="uid://dgayuh42w4v6u" path="res://levels/rooms/room_b.tscn" id="3_hxj8u"]
@@ -20,6 +21,8 @@
 [ext_resource type="AudioStream" uid="uid://cq4jwd2co1jh8" path="res://taco-bell-bong-sfx.mp3" id="11_d4tqv"]
 [ext_resource type="Texture2D" uid="uid://s41qlfv1prrv" path="res://nairon-3.png" id="12_e3re6"]
 [ext_resource type="PackedScene" uid="uid://cqplyqiw72w7n" path="res://mob2.tscn" id="15_leiva"]
+[ext_resource type="PackedScene" uid="uid://dcgjr85t2w6gs" path="res://panel_container.tscn" id="21_03q3v"]
+[ext_resource type="PackedScene" uid="uid://temd2mwx0nns" path="res://teleporter.tscn" id="22_mkcin"]
 
 [sub_resource type="Resource" id="Resource_jp31r"]
 script = ExtResource("4_r7jsa")
@@ -44,6 +47,7 @@ sound_on_pickup = ExtResource("11_d4tqv")
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_cpxib")
 
 [node name="RoomA" parent="." instance=ExtResource("2_1w0d1")]
 position = Vector2(104, 2128)
@@ -233,7 +237,7 @@ rotation = 0.345231
 item = SubResource("Resource_kevdj")
 
 [node name="Pickup45" parent="RoomA" instance=ExtResource("3_rxpo2")]
-position = Vector2(1939.91, -2539.78)
+position = Vector2(1871.88, -2511.86)
 rotation = 0.345231
 item = SubResource("Resource_kevdj")
 
@@ -244,6 +248,26 @@ item = SubResource("Resource_kevdj")
 
 [node name="Pickup47" parent="RoomA" instance=ExtResource("3_rxpo2")]
 position = Vector2(2334.59, -2257.33)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup48" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(1945.89, -2520.77)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup49" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2032.91, -2539.67)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup50" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2039.99, -2608.66)
+rotation = 0.345231
+item = SubResource("Resource_kevdj")
+
+[node name="Pickup51" parent="RoomA" instance=ExtResource("3_rxpo2")]
+position = Vector2(2043.08, -2682.66)
 rotation = 0.345231
 item = SubResource("Resource_kevdj")
 
@@ -319,6 +343,10 @@ rotation = -0.00114604
 position = Vector2(710, 196)
 rotation = -0.00114604
 
+[node name="Teleporter" parent="RoomC" instance=ExtResource("22_mkcin")]
+unique_name_in_owner = true
+position = Vector2(368, 99)
+
 [node name="Bridges" parent="." instance=ExtResource("5_1iltw")]
 position = Vector2(1896, 2776)
 tile_map_data = PackedByteArray("AAD9////AAAAAAEAAAD+////AAAAAAEAAAD/////AAAAAAEAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAABAP7/AAAAAAEAAAABAP3/AAAAAAEAAAACAP3/AAAAAAEAAAACAPz/AAAAAAEAAAADAPz/AAAAAAEAAAAEAPz/AAAAAAEAAAAFAPz/AAAAAAEAAAANAPf/AAABAAAAAAANAPb/AAABAAAAAAANAPX/AAABAAAAAAAMAPX/AAACAAAAAAALAPX/AAACAAAAAAAKAPX/AAACAAAAAAAJAPX/AAACAAAAAAAIAPX/AAACAAAAAAAHAPX/AAACAAAAAAAHAPT/AAABAAEAAAAHAPP/AAABAAEAAAAHAPL/AAABAAEAAAAHAPH/AAABAAEAAAAHAPD/AAABAAEAAAA=")
@@ -333,3 +361,13 @@ tile_map_data = PackedByteArray("AAAAAP//AAAAAAAAAAABAP//AAAAAAAAAAACAP//AAAAAAA
 [node name="Player" parent="." instance=ExtResource("7_nyxeo")]
 position = Vector2(647, 2592)
 collision_mask = 64
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="EndMenu" parent="CanvasLayer" instance=ExtResource("21_03q3v")]
+process_mode = 3
+visible = false
+offset_left = -231.0
+offset_top = -124.5
+offset_right = 231.0
+offset_bottom = 124.5

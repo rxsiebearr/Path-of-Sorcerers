@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcgjr85t2w6gs"]
+
+[ext_resource type="Script" path="res://panel_container.gd" id="1_4r0a5"]
+
+[sub_resource type="Theme" id="Theme_7c27h"]
+default_font_size = 50
+Button/fonts/font = null
+Label/fonts/font = null
+
+[sub_resource type="Theme" id="Theme_txaab"]
+default_font_size = 40
+
+[sub_resource type="Theme" id="Theme_p4or1"]
+default_font_size = 32
+Button/fonts/font = null
+
+[sub_resource type="Theme" id="Theme_wcuin"]
+default_font_size = 32
+Button/fonts/font = null
+
+[node name="EndMenu" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.5
+offset_top = -127.5
+offset_right = 241.5
+offset_bottom = 127.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4r0a5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_7c27h")
+text = "You Win
+"
+horizontal_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_txaab")
+text = "Time: "
+horizontal_alignment = 1
+
+[node name="ReplayButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = SubResource("Theme_p4or1")
+text = "Play Again"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_wcuin")
+text = "Quit"
